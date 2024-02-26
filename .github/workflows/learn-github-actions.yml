@@ -19,5 +19,5 @@ jobs:
       #   run: ansible-galaxy collection install -r .github/cicd-ansible-collections.yml --force
 
       - name: Install collections required by .ci/tower_conf.yml
-        run: ansible-playbook /home/user1/git_runner/playbooks/run_job.yml -e some_var=${{ github.actor }}
+        run: ansible-playbook /home/user1/git_runner/playbooks/run_job.yml -e tower_password=kP19UK32jaOCQat6V0HZ3fda4uUpLOUg
 
