@@ -3,6 +3,9 @@
   hosts: r2
   # gather_facts: false
   tasks:
+    - name: Install Package
+      ansible.builtin.pip:
+        name: ansible-pylibssh
     - name: Gather IOS facts
       cisco.ios.ios_facts:
         gather_subset: all
