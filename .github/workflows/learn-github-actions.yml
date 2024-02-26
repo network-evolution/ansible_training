@@ -11,5 +11,9 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - run: pip install ansible-core
-      - run: ansible-galaxy collections install awx.awx
+      - name: pip3 installs for actions runtime
+        # This applies to packages to install in github actions runner/docker image at runtime
+        run: pip3 install -r .github/cicd-pip3-requirements.txt
+
+      - name: Install collections required by .ci/tower_conf.yml
+        run: ansible-galaxy collection install -r .github/cicd-ansible-collections.yml --force
