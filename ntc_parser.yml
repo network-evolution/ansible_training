@@ -15,6 +15,7 @@
 
     - name: Install using command
       ansible.builtin.command: which python
+      ignore_errors: true
 
     - debug: msg="{{ ansible_playbook_python }}" 
 
