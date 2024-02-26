@@ -7,6 +7,9 @@
       ansible.builtin.pip:
         name: ntc-templates
 
+    - name: Install using command
+      ansible.builtin.command: pip install ntc-templates
+      
     - name: Ansible CLI Parse
       ansible.utils.cli_parse:
         command: "show ip interface brief"
