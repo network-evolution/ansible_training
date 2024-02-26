@@ -11,3 +11,5 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      - run: pip install ansible-core
+      - run: ansible-galaxy collections install awx.awx
