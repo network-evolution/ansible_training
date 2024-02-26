@@ -13,8 +13,11 @@
     - name: Install using command
       ansible.builtin.command: pip list
 
+    - name: Install using command
+      ansible.builtin.command: which python
+
     - debug: msg="{{ ansible_playbook_python }}" 
-     
+
     - name: Ansible CLI Parse
       ansible.utils.cli_parse:
         command: "show ip interface brief"
