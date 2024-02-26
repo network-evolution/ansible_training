@@ -3,6 +3,10 @@
   hosts: r2
   gather_facts: false
   tasks:
+    - name: Install Package
+      ansible.builtin.pip:
+        name: ntc-templates
+
     - name: Ansible CLI Parse
       ansible.utils.cli_parse:
         command: "show ip interface brief"
