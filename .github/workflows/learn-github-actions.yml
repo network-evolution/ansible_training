@@ -15,5 +15,9 @@ jobs:
         # This applies to packages to install in github actions runner/docker image at runtime
         run: pip3 install -r .github/cicd-pip3-requirements.txt
 
+      # - name: Install collections required by .ci/tower_conf.yml
+      #   run: ansible-galaxy collection install -r .github/cicd-ansible-collections.yml --force
+
       - name: Install collections required by .ci/tower_conf.yml
-        run: ansible-galaxy collection install -r .github/cicd-ansible-collections.yml --force
+        run: ansible-playbook /home/user1/git_runner/playbooks/run_job.yml
+
