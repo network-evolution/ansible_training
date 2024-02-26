@@ -5,12 +5,12 @@ jobs:
   check-bats-version:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+      # - uses: actions/checkout@v4
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '14'
+      # - run: npm install -g bats
+      # - run: bats -v
       - name: pip3 installs for actions runtime
         # This applies to packages to install in github actions runner/docker image at runtime
         run: pip3 install -r .github/cicd-pip3-requirements.txt
