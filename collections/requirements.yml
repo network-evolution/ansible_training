@@ -1,3 +1,4 @@
 collections:
   - cisco.ios
   - ansible.utils
+  - netbox.netbox
