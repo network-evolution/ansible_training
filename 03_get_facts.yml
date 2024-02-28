@@ -1,6 +1,6 @@
 ---
 - name: Cisco ios facts demo
-  hosts: device_type_vios
+  hosts: device_types_vios
   # gather_facts: false
   tasks:
     - name: Gather IOS facts
