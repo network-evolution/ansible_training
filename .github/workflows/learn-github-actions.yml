@@ -11,8 +11,8 @@ jobs:
       #     node-version: '14'
       # - run: npm install -g bats
       # - run: bats -v
-      - name: Python Package Installation in Runner
-        run: pip3 install -r .github/python-requirements-cicd.txt
+      # - name: Python Package Installation in Runner
+      #   run: pip3 install -r .github/python-requirements-cicd.txt
 
       # - name: Install CICD Collections
       #   run: ansible-galaxy collection install -r .github/ansible-collections-cicd.yml --force
