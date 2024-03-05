@@ -11,13 +11,12 @@ jobs:
       #     node-version: '14'
       # - run: npm install -g bats
       # - run: bats -v
-      - name: pip3 installs for actions runtime
-        # This applies to packages to install in github actions runner/docker image at runtime
-        run: pip3 install -r .github/cicd-pip3-requirements.txt
+      - name: Python Package Installation in Runner
+        run: pip3 install -r .github/python-requirements-cicd.txt
 
-      # - name: Install collections required by .ci/tower_conf.yml
-      #   run: ansible-galaxy collection install -r .github/cicd-ansible-collections.yml --force
+      # - name: Install CICD Collections
+      #   run: ansible-galaxy collection install -r .github/ansible-collections-cicd.yml --force
 
-      - name: Install collections required by .ci/tower_conf.yml
+      - name: Trigger AWX Job from Runner
         run: ansible-playbook /home/user1/git_runner/playbooks/run_job.yml -e tower_cred=admin
 
