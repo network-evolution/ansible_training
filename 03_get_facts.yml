@@ -10,6 +10,6 @@
         gather_network_resources: l3_interfaces
         
     - name: Print ansible_facts
-      ansible.builtin.debug1:
+      ansible.builtin.debug:
         msg:
           - "{{ ansible_facts }}"
