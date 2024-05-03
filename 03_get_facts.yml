@@ -3,7 +3,7 @@
   hosts: device_types_iosv_new
   # gather_facts: false
   tasks:
-    - name: Gather IOS facts
+    - name: Gather IOS facts1
       cisco.ios.ios_facts:
         gather_subset: all
         available_network_resources: true
