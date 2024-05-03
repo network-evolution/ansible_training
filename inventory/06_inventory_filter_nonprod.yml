@@ -9,4 +9,4 @@ group_by:
  - sites
  - device_types
 query_filters:
-  - site: nyc_nonprod
+  - site: blr_nonprod
