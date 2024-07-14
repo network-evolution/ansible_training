@@ -17,12 +17,6 @@
         msg:
           - "{{ ansible_facts }}"
 
-    - name: Config intf
-      cisco.ios.ios_l3_interfaces:
-        config:
-          - name: "{{ interface_name }}"
-            ipv4:
-              - address: "{{ interface_ip}}"
     # - name: Print ansible_facts
     #   ansible.builtin.debug:
     #     msg:
