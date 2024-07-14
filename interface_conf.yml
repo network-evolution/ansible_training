@@ -1,0 +1,11 @@
+---
+- name: Cisco ios facts demo
+  hosts: r2
+  # gather_facts: false
+  tasks:
+    - name: Config intf
+      cisco.ios.ios_l3_interfaces:
+        config:
+          - name: "{{ interface_name }}"
+            ipv4:
+              - address: "{{ interface_ip}}"
